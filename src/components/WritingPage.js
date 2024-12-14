@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { generateReflection } from '../services/groqService';
 import '../styles/WritingPage.css';
 
@@ -8,7 +8,6 @@ const WritingPage = () => {
   const [reflection, setReflection] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
   const { philosophy } = location.state || {};
 
   const handleTextChange = (e) => {

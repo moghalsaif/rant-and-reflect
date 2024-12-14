@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #F5F5DC;
+}
+
+:root {
+  --soft-ivory: #F5F5DC;
+  --deep-teal: #008080;
+  --warm-terracotta: #E2725B;
+  --muted-gold: #D4AF37;
+  --dark-charcoal: #36454F;
+}

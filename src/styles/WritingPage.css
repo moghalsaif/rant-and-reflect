@@ -1,0 +1,155 @@
+.writing-page {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+.twitter-link {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.twitter-link:hover {
+  opacity: 1;
+}
+
+.writing-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.writing-input {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  resize: none;
+}
+
+.writing-input:focus {
+  outline: none;
+}
+
+.reflect-button {
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reflect-button:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.reflect-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reflection-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.reflection-text {
+  color: #280A22;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .writing-container {
+    padding: 1rem;
+  }
+
+  .writing-input {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .reflection-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .reflection-text {
+    font-size: 1.1rem;
+  }
+
+  .reflect-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+}

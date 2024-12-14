@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rant-and-reflect/static/css/main.a8bff5d1.css",
-    "main.js": "/rant-and-reflect/static/js/main.cd8072d9.js",
+    "main.js": "/rant-and-reflect/static/js/main.6db74ef9.js",
     "index.html": "/rant-and-reflect/index.html",
     "main.a8bff5d1.css.map": "/rant-and-reflect/static/css/main.a8bff5d1.css.map",
-    "main.cd8072d9.js.map": "/rant-and-reflect/static/js/main.cd8072d9.js.map"
+    "main.6db74ef9.js.map": "/rant-and-reflect/static/js/main.6db74ef9.js.map"
   },
   "entrypoints": [
     "static/css/main.a8bff5d1.css",
-    "static/js/main.cd8072d9.js"
+    "static/js/main.6db74ef9.js"
   ]
 }

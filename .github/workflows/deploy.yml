@@ -21,13 +21,35 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Check Node.js and npm versions
+        run: |
+          node --version
+          npm --version
+
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm list || true
+
+      - name: Verify Environment Variables
+        env:
+          REACT_APP_GROQ_API_KEY: ${{ secrets.REACT_APP_GROQ_API_KEY }}
+        run: |
+          echo "Checking Groq API key..."
+          if [ -z "$REACT_APP_GROQ_API_KEY" ]; then
+            echo "Error: REACT_APP_GROQ_API_KEY is not set"
+            exit 1
+          else
+            echo "Groq API key is set"
+          fi
 
       - name: Build
         env:
           REACT_APP_GROQ_API_KEY: ${{ secrets.REACT_APP_GROQ_API_KEY }}
-        run: npm run build
+        run: |
+          echo "Starting build process..."
+          npm run build
+          ls -la build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

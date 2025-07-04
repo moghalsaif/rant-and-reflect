@@ -16,16 +16,14 @@ const WritingPage = () => {
 
   const handleReflect = async () => {
     if (!userText.trim()) return;
-    
     setIsLoading(true);
-    try {
-      const advice = await generateReflection(userText, philosophy);
-      setReflection(advice);
-    } catch (error) {
-      console.error('Error generating reflection:', error);
-      setReflection('Unable to generate reflection at this time. Please try again.');
-    }
-    setIsLoading(false);
+    // Always show the same demo response and indicate it's a demo
+    setTimeout(() => {
+      setReflection(
+        `--- DEMO RESPONSE ---\n\nA Letter from Stoicism\n\nDear Seeker,\n\nThank you for sharing your thoughts. In the tradition of Stoicism, remember that challenges are a part of life and an opportunity for growth.\n\nYour Path Forward:\n1. Focus on what you can control, and let go of what you cannot.\n2. Practice gratitude for the present moment.\n3. Reflect on this quote: \"The happiness of your life depends upon the quality of your thoughts.\"\n\nImmediate Action:\nTake a deep breath and write down three things you are grateful for today.\n\nWith wisdom,\nStoicism Tradition\n\n(Note: This is a demo response. API functionality is currently disabled.)`
+      );
+      setIsLoading(false);
+    }, 800);
   };
 
   return (
